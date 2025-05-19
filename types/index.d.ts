@@ -63,10 +63,11 @@ declare type Account = {
 };
 
 declare type Transaction = {
-  id: string;
+  id: number;
   $id: string;
   name: string;
   paymentChannel: string;
+  description:string;
   type: string;
   accountId: string;
   amount: number;
