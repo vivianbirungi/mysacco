@@ -1,14 +1,15 @@
 import { Doughnut } from "react-chartjs-2"
 import AnimatedCounter from "./AnimatedCounter"
 import DoughnutChart from "./Doughnut"
+import BalanceCard from "./BalanceCard"
 
 const TotalBalanceBox = ({accounts =[], totalBanks, totalCurrentBalance}:TotalBalanceBoxProps) => {
   return (
    <section className="total-balance">
-        <div className="total-balance-chart">
+        {/* <div className="total-balance-chart">
             <DoughnutChart accounts={accounts}/>
-        </div>
-        <div className="flex flex-col gap-6">
+        </div> */}
+        {/* <div className="flex flex-col gap-6">
             <h2 className="header-2">
                 Bank Accounts: {totalBanks}
             </h2>
@@ -21,7 +22,12 @@ const TotalBalanceBox = ({accounts =[], totalBanks, totalCurrentBalance}:TotalBa
                     
                 </div>
             </div>
-        </div>
+        </div> */}
+        <div className="flex gap-6 mb-6">
+                <BalanceCard title="Balance" amount="3,000,000 UGX"/>
+                <BalanceCard title="Total Contributions" amount="1,250,000 UGX"/>
+                <BalanceCard title="Total Shares" amount="500,000 UGX"/>
+              </div>
    </section>
   )
 }
