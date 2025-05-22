@@ -335,8 +335,10 @@ export const transactions = [
 ];
 export const statusColors: Record<string, string> = {
   Completed: 'bg-green-100 text-green-800',
+  active: 'bg-green-100 text-green-800',
   Pending: 'bg-yellow-100 text-yellow-800',
   Failed: 'bg-red-100 text-red-800',
+  inactive: 'bg-red-100 text-red-800',
 };
 
 
