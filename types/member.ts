@@ -14,3 +14,13 @@ export interface Member {
   total_contributions: number;
   status: 'active' | 'inactive' | 'suspended';
 }
+
+export type ContributionReport = {
+  id: number;
+  memberId: string;
+  memberName: string;
+  date: string;
+  amount: number;
+  method: string;
+  reference: string;
+};

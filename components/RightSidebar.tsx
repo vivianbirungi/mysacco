@@ -6,26 +6,25 @@ import BarChart from "./Barchart";
 
 const RightSidePanel = () => {
   return (
-    <div className="space-y-4 w-full max-w-sm">
+    <aside className='right-sidebar gap-4'>
       {/* Profile Card */}
-      <Card className="rounded-2xl shadow-sm p-4">
-        <div className="flex items-center space-x-4">
-          <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-xl font-semibold text-blue-700">
-            V
-          </div>
-          <div>
-            <h2 className="text-lg font-semibold">Vivian Birungi</h2>
-            <p className="text-sm text-gray-500">vivi@gmail.com</p>
-            <p className="text-xs text-gray-400 mt-1">Member ID: SAC-00123</p>
-            <span className="text-xs text-green-600 font-medium">Status: Active</span>
-          </div>
-        </div>
-        <div className="mt-4 flex gap-2">
-          <Button size="sm">Add Shares</Button>
-          <Button size="sm" variant="outline">Edit Profile</Button>
-        </div>
-      </Card>
-
+            <section className='flex flex-col pb-8'>
+                <div className="flex items-center space-x-4">
+                    <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-xl font-semibold text-blue-700">
+                        V
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-semibold">Vivian Birungi</h2>
+                        <p className="text-sm text-gray-500">vivi@gmail.com</p>
+                        <p className="text-xs text-gray-400 mt-1">Member ID: SAC-00123</p>
+                        <span className="text-xs text-green-600 font-medium">Status: Active</span>
+                    </div>
+                </div>
+                <div className="mt-4 flex gap-2">
+                    <Button size="sm">Add Shares</Button>
+                    <Button size="sm" variant="outline">Edit Profile</Button>
+                </div>
+            </section>
       {/* Digital Member Card */}
      
 
@@ -61,7 +60,7 @@ const RightSidePanel = () => {
         <Button className="mt-3" size="sm">Share Invite Link</Button>
       </Card>
        <BarChart/>
-    </div>
+    </aside>
   );
 };
 

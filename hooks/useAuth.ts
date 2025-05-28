@@ -1,7 +1,7 @@
 // hooks/useAuth.ts
 'use client';
 import { useState } from 'react';
-import api from '@/lib/api';
+import {api} from '@/lib/api';
 import { useRouter } from 'next/navigation';
 
 export const useAuth = () => {
@@ -14,12 +14,16 @@ export const useAuth = () => {
     setError('');
 
     try {
-      const response = await api.post('/auth/login', { email, password });
+      const response = await api.post('/api/login', { email, password });
       const { token, user } = response.data;
 
       // Store token in localStorage or cookies
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
+
+      //cookies
+    //    Cookies.set('user', JSON.stringify(userData));
+    // Cookies.set('role', userData.role); // for middleware
 
       router.push('/dashboard');
     } catch (err: any) {
