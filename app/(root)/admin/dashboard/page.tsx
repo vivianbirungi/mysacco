@@ -7,6 +7,9 @@ import { useEffect } from 'react';
 import { statusColors, transactions } from '@/lib/data';
 import HeaderBox from '@/components/HeaderBox';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
+import BalanceCard from '@/components/BalanceCard';
+import BarChart from '@/components/Barchart';
+import QuickLinks from '@/components/admin/QuickLinks';
 
 export default function AdminDashboardPage() {
   // const { user } = useContext(useAuth);
@@ -31,13 +34,16 @@ export default function AdminDashboardPage() {
             user={loggedIn?.firstName || 'Guest'}
             subtext="Access and manage your account and transactions efficiently."
           />
-          <TotalBalanceBox
-            accounts={[]}
-            totalBanks ={1}
-            totalCurrentBalance={103049063}
-          />
+          <div className="flex gap-6 mb-6">
+            <BalanceCard title="Balance" amount="3,000,000 UGX"/>
+            <BalanceCard title="Total Contributions" amount="1,250,000 UGX"/>
+            <BalanceCard title="Total Shares" amount="500,000 UGX"/>
+            <BalanceCard title="Total Shares" amount="500,000 UGX"/>
+          </div>
         </header>
-        <div>
+        <QuickLinks />
+        <div className='flex gap-4'>
+          <BarChart/>
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
             <ul className="space-y-2 text-sm text-gray-700">

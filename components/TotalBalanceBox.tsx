@@ -27,7 +27,6 @@ const TotalBalanceBox = ({accounts =[], totalBanks, totalCurrentBalance}:TotalBa
                 <BalanceCard title="Balance" amount="3,000,000 UGX"/>
                 <BalanceCard title="Total Contributions" amount="1,250,000 UGX"/>
                 <BalanceCard title="Total Shares" amount="500,000 UGX"/>
-                <BalanceCard title="Total Shares" amount="500,000 UGX"/>
               </div>
    </section>
   )
